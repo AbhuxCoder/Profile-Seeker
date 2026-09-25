@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Profile</title>
+    <link rel="icon" href="profilephoto.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Boldonse&family=Federant&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&family=Sigmar+One&family=Space+Grotesk:wght@300..700&family=Titan+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="mainFullbody">
+        <header id="fheader">
+            <h1>Profile Seeker</h1>
+            <nav id="navsection">
+                <a href="level.html">About Level</a>
+                <span>/</span>
+                <a href="aboutus.html">About Us</a>
+            </nav>
+            <button id="light_dakrmode" type="button" aria-label="Toggle light and dark theme">
+                <i class="fa-solid fa-sun removeDisplay" id="sun"></i>
+                <i class="fa-solid fa-moon" id="moon"></i>
+            </button>
+        </header>
+
+        <div id="fbody">
+            <div class="search-box-glow">
+                <div class="searchInput">
+                    <h2>See Your <strong>LeetCode Profile in a new way</strong></h2>
+
+                    <form action="#">
+                        <input
+                            type="text"
+                            id="userProfileName"
+                            placeholder="Enter username"
+                            autocomplete="off"
+                            required
+                        />
+                        <button id="search-btn" type="submit">Search</button>
+                    </form>
+                </div>
+
+                <svg class="search-glow-container">
+                    <rect class="search-glow-blur" pathLength="100"></rect>
+                    <rect class="search-glow-line" pathLength="100"></rect>
+                </svg>
+            </div>
+        </div>
+
+        <footer id="ffooter"></footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

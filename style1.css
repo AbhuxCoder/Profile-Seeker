@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Federant&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto+Slab:wght@100..900&family=Titan+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root{
+
+    /* ===========================
+       Background Colors (dark theme)
+    ============================ */
+
+    --bg-main: rgb(11, 10, 10);
+    --bg-secondary: #3A291D;
+    --bg-card: #4F3827;
+    --bg-card-dark: #3A2A20;
+    --bg-navbar: #342117;
+    --bg-input: #463324;
+    --bg-hover: #5C4330;
+    --bg-page: rgb(8, 8, 8);
+
+    /* ===========================
+       Gradient Background
+    ============================ */
+
+    --gradient-main:rgb(31, 28, 28,0.7);
+
+    /* ===========================
+       Primary Accent (LeetCode Orange)
+    ============================ */
+
+    --primary: #E39D51;
+    --primary-light: #F2B36C;
+    --primary-dark: #C67A33;
+    --primary-hover: #F4A84C;
+
+    /* ===========================
+       Secondary Accent
+    ============================ */
+
+    --gold: #D8A15C;
+    --gold-light: #E8BE83;
+    --gold-dark: #AF713C;
+
+    /* ===========================
+       Green
+    ============================ */
+
+    --green: #3FC27B;
+    --green-dark: #2C9C61;
+    --green-light: #72D99B;
+
+    /* ===========================
+       Red
+    ============================ */
+
+    --red: #D65D4B;
+    --red-dark: #A94539;
+
+    /* ===========================
+       Graph Colors
+    ============================ */
+
+    --graph-bg: #5E5148;
+    --graph-low: #70645A;
+    --graph-mid: #A58C72;
+    --graph-high: #E39D51;
+    --graph-active: #48C26F;
+
+    /* ===========================
+       Borders
+    ============================ */
+
+    --border: #71553D;
+    --border-light: #9D7753;
+    --border-dark: #4D3727;
+
+    /* ===========================
+       Text Colors
+    ============================ */
+
+    --text-white: #F3F0EB;
+    --text-primary: #ECE7E0;
+    --text-secondary: #C9B7A4;
+    --text-muted: #A3907C;
+    --text-dark: #725E4C;
+
+    /* ===========================
+       Icon Colors
+    ============================ */
+
+    --icon: #F2EFE9;
+    --icon-muted: #B9A38D;
+    --icon-accent: #E39D51;
+
+    /* ===========================
+       Shadows
+    ============================ */
+
+    --shadow: 0 10px 30px rgba(0,0,0,.45);
+    --shadow-card: 0 15px 40px rgba(0,0,0,.35);
+    --shadow-button: 0 0 20px rgba(227,157,81,.30);
+
+    --progress-degree: 0%;
+}
+
+/* ===========================
+   Light theme overrides
+   Applied when .mainFullbody carries the "light" class
+============================ */
+.light{
+    --bg-page: #FAF7F2;
+    --bg-main: #FFFFFF;
+    --bg-secondary: #F1E8DC;
+    --bg-card: #FFFFFF;
+    --bg-card-dark: #F4ECDF;
+    --bg-navbar: #FFFFFF;
+    --bg-input: #FFFFFF;
+    --bg-hover: #F1E3CE;
+
+    --gradient-main: linear-gradient(135deg, #FFF9F0 0%, #FBEFDD 40%, #F6E3C4 100%);
+
+    --text-white: #1E1712;
+    --text-primary: #241C15;
+    --text-secondary: #5A4A38;
+    --text-muted: #86735B;
+    --text-dark: #A3907C;
+
+    --border: #E7D3B4;
+    --border-light: #D8A15C;
+    --border-dark: #C9B7A4;
+
+    --icon: #241C15;
+    --icon-muted: #86735B;
+
+    --shadow: 0 10px 30px rgba(140,110,70,.15);
+    --shadow-card: 0 15px 40px rgba(140,110,70,.12);
+    --shadow-button: 0 0 20px rgba(227,157,81,.35);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 62.5%;
+    background: var(--bg-page);
+    color: var(--text-white);
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    transition: background .3s ease, color .3s ease;
+}
+
+.mainFullbody{
+    min-height: 100vh;
+    background: var(--gradient-main);
+    color: var(--text-white);
+    transition: background .3s ease, color .3s ease;
+}
+
+/* header */
+#fheader{
+    margin: auto;
+    padding: 1rem 2rem;
+    max-width: 1250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+#fheader h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--text-white);
+}
+
+#navsection{
+    gap: 1.2rem;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#navsection a{
+    color: var(--text-secondary);
+    transition: color .2s ease;
+}
+
+#navsection a:hover,
+#navsection a:focus-visible{
+    color: var(--primary);
+}
+
+#navsection span{
+    color: var(--text-dark);
+}
+
+/*header end*/
+
+/* theme toggle */
+#light_dakrmode{
+    border-style: none;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--icon);
+    background: var(--bg-card);
+    /* transition: background .2s ease, border-color .2s ease, transform .15s ease; */
+}
+
+#light_dakrmode:hover{
+    transform: translateY(-1px);
+}
+
+#light_dakrmode:focus-visible{
+    border-color: var(--primary);
+}
+
+/* Body start*/
+
+#fbody{
+    margin: auto;
+    max-width: 1250px;
+    min-height: 60vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box-glow{
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+}
+
+.searchInput{
+    margin: auto;
+    width: 100%;
+    padding: 3rem 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.searchInput h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-primary);
+    max-width: 32ch;
+}
+
+.searchInput h2 strong{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.searchInput form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+#userProfileName{
+    flex: 1 1 320px;
+    padding: 0 1.6rem;
+    min-height: 5.4rem;
+    max-width: 100%;
+    border-radius: 3rem;
+    border: 2px solid var(--border);
+    background: var(--bg-input);
+    color: var(--text-white);
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#userProfileName::placeholder{
+    color: var(--text-muted);
+}
+
+#userProfileName:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(227,157,81,.18);
+}
+
+#search-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 100px;
+    min-height: 2rem;
+    font-weight: 650;
+    font-size: 1.4rem;
+    color: var(--bg-page);
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background: var(--primary);
+    transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+
+#search-btn:hover:not(:disabled){
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 26px rgba(227,157,81,.45);
+}
+
+#search-btn:active:not(:disabled){
+    transform: translateY(0);
+}
+
+#search-btn:disabled{
+    cursor: not-allowed;
+    opacity: .7;
+}
+
+.search-error{
+    color: var(--red);
+    font-size: 1.2rem;
+    margin-top: -1rem;
+}
+
+.removeDisplay{
+    display: none;
+}
+
+/* ===========================
+   Responsive breakpoints
+============================ */
+@media (max-width: 768px){
+    #fheader{
+        padding: 1.2rem 1.5rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #fbody{
+        padding: 1.5rem;
+        min-height: 50vh;
+    }
+
+    .searchInput{
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .searchInput h2{
+        font-size: 1.9rem;
+    }
+
+    .searchInput form{
+        flex-direction: column;
+    }
+
+    #search-btn{
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px){
+    #fheader h1{
+        font-size: 1.5rem;
+    }
+
+    #navsection{
+        font-size: 1.1rem;
+        gap: 0.8rem;
+    }
+
+    .searchInput h2{
+        font-size: 1.6rem;
+    }
+}

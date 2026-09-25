@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" href="imageforhero.png" type="image/x-icon">
+</head>
+<body>
+
+    <header id="fheader">
+        <h1>Profile Seeker</h1>
+        <nav id="navsection">
+            <a href="level.html">About Us</a>
+            <span>/</span>
+            <a href="aboutus.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="stage">
+        <div class="scene">
+            <div class="slider">
+
+                <!-- 1. Profile -->
+                <article class="slide">
+                    <img id="avatar" src="profilephoto.webp" alt="Profile photo">
+                    <p id="username">User Name</p>
+                    <p class="sub">Global ranking <span id="ranking" class="glow-text">9999</span></p>
+                </article>
+
+                <!-- 2. Total solved -->
+                <article class="slide total">
+                    <h2>Total solved</h2>
+                    <div class="ring" id="ring-total">
+                        <svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52"/></svg>
+                        <div class="ring-label"><b id="totalquestionsolved">0</b><small>of <span id="totalQuestion">0</span></small></div>
+                    </div>
+                </article>
+
+                <!-- 3. Easy -->
+                <article class="slide easy">
+                    <h2>Easy</h2>
+                    <div class="ring" id="ring-easy">
+                        <svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52"/></svg>
+                        <div class="ring-label"><b id="easySolved">0</b><small>of <span id="easyTotal">0</span></small></div>
+                    </div>
+                </article>
+
+                <!-- 4. Medium -->
+                <article class="slide med">
+                    <h2>Medium</h2>
+                    <div class="ring" id="ring-med">
+                        <svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52"/></svg>
+                        <div class="ring-label"><b id="medSolved">0</b><small>of <span id="medTotal">0</span></small></div>
+                    </div>
+                </article>
+
+                <!-- 5. Hard -->
+                <article class="slide hard">
+                    <h2>Hard</h2>
+                    <div class="ring" id="ring-hard">
+                        <svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52"/></svg>
+                        <div class="ring-label"><b id="hardSolved">0</b><small>of <span id="hardTotal">0</span></small></div>
+                    </div>
+                </article>
+
+                <!-- 6. Social links -->
+                <article class="slide">
+                    <h2>Find them online</h2>
+                    <ul id="socials"></ul>
+                </article>
+
+               
+
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prev" aria-label="Previous slide"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="control-btn" id="next" aria-label="Next slide"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </main>
+
+    <footer id="ffooter">
+        <p>&copy; LeetCode</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html>
